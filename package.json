@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "cross-env NODE_ENV=production vue-tsc --noEmit && vite-ssg build",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -12,8 +12,19 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.4.0",
     "@vue/compiler-sfc": "^3.2.4",
+    "@vue/server-renderer": "^3.2.4",
+    "@vueuse/head": "^0.6.0",
+    "critters": "0.0.10",
+    "cross-env": "^7.0.3",
+    "sass": "^1.38.0",
     "typescript": "^4.3.5",
     "vite": "^2.5.0",
+    "vite-plugin-components": "^0.13.2",
+    "vite-plugin-fonts": "^0.2.2",
+    "vite-plugin-pwa": "^0.11.0",
+    "vite-plugin-windicss": "^1.2.7",
+    "vite-ssg": "^0.14.6",
+    "vue-router": "^4.0.11",
     "vue-tsc": "^0.3.0"
   }
 }
